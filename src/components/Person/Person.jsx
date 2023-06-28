@@ -21,18 +21,15 @@ const Person = () => {
         <div className='torso'></div>
         <div className='brazo-izq'></div>
         <div className='brazo-der'></div>
-        
-        </div>
-        <div className='inferior-container'>
- 
-        <div>
-          <div className='pierna-izq'></div>
+
+      </div>
+      <div className='inferior-container'>
+        <div className='pierna-izq'>
           <div className='zapato-izq'></div>
-        </div>
-        <div>
-          <div className='pierna-der'></div>
+          </div>
+        <div className='pierna-der'>
           <div className='zapato-der'></div>
-        </div>
+          </div>
       </div>
     </div>
   )

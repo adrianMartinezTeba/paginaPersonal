@@ -115,9 +115,9 @@
   display: flex;
   align-items: center;
 justify-content: center;
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
+  width: 40px;
+  height: 90px;
+
 }
 .torso{
 position: absolute;
@@ -125,15 +125,18 @@ z-index: 1;
   background-color: blue;
     width: 40px;
   height: 90px;
-  border-radius: 50%;
-
+border-top-left-radius: 50%;
+border-top-right-radius: 50%;
+border-bottom-left-radius: 15%;
+border-bottom-right-radius: 15%;
 }
 .brazo-izq {
-  z-index: 2;
+  z-index: 0;
   border-radius: 50%;
   width: 20px;
   height: 70px;
   background-color: green;
+  transform: rotate(15deg);
 }
 
 .brazo-der {  
@@ -142,24 +145,40 @@ z-index: 1;
   width: 20px;
   height: 70px;
   background-color: green;
+  transform: rotate(-15deg);
 
 }
 
 .inferior-container {
-
   display: flex;
-
-
+  margin-top: -5px;
 }
 
-.pierna-izq,
+.pierna-izq{
+  flex-direction: column;
+  justify-content: flex-end;
+  display: flex;
+  width: 20px;
+  height: 70px;
+  background-color: purple;
+  transform: rotate(15deg);
+}
 .pierna-der {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: rotate(-15deg);
   width: 20px;
   height: 70px;
   background-color: purple;
 }
 
-.zapato-izq,
+.zapato-izq{
+  width: 30px;
+  height: 10px;
+  background-color: brown;
+  margin-top: 10px;
+}
 .zapato-der {
   width: 30px;
   height: 10px;
