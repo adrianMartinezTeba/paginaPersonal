@@ -1,0 +1,170 @@
+.person-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  width: 200px;
+}
+
+.cabeza-container {
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(228, 190, 153, 0.76);
+  width: 30px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.cabeza-sup {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30px;
+  height: 20px;
+
+}
+
+.gorra1 {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 30px;
+  height: 20px;
+  background-color: black;
+}
+
+.gorra2 {
+
+  width: 40px;
+  height: 10px;
+  background-color: red;
+}
+
+.cabeza-inf {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30px;
+  height: 50px;
+
+}
+
+.ceja {
+
+  // position: absolute;
+  // top: 25px;
+  height: 2px;
+  width: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  margin-top: -2px;
+  // background-color: black;
+
+}
+
+.ojo {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+
+}
+
+.pupila {
+  
+  background-color: black;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+}
+
+.nariz {
+
+  width: 3px;
+  height: 7px;
+  margin-top: 2px;
+  margin-right: 1px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom-right-radius: 50%;
+}
+
+.boca {
+  width: 8px;
+  height: 2px;
+  margin-top: 3px;
+  margin-right: 4px;
+  border: 1px solid black;
+  border-top: transparent;
+  border-right: transparent;
+  border-bottom-left-radius: 50%;
+}
+
+.torso-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 80px;
+
+}
+
+.cuerpo {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: blue;
+  margin-bottom: 20px;
+}
+
+.brazo-izq,
+.brazo-der {
+  position: absolute;
+  width: 20px;
+  height: 70px;
+  background-color: green;
+}
+
+.brazo-izq {
+  margin-right: 30px;
+}
+
+.brazo-der {
+  margin-left: 30px;
+}
+
+.inferior-container {
+  position: absolute;
+  display: flex;
+
+  top: 180px;
+
+}
+
+.pierna-izq,
+.pierna-der {
+  width: 20px;
+  height: 70px;
+  background-color: purple;
+}
+
+.zapato-izq,
+.zapato-der {
+  width: 30px;
+  height: 10px;
+  background-color: brown;
+  margin-top: 10px;
+}

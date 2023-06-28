@@ -1,0 +1,77 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .museum-container {
+    position: relative;
+  }
+  
+  .building {
+    width: 200px;
+    height: 250px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .title-museum {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .entrance {
+    width: 60px;
+    height: 100px;
+    background-color: #dcdcdc;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .door {
+    width: 30px;
+    height: 80px;
+    background-color: #8b4513;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .windows {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .window {
+    width: 30px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .person {
+    width: 80px;
+    height: 160px;
+    background-color: #ff6347;
+    border-radius: 50%;
+  }
+  
