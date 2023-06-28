@@ -1,5 +1,4 @@
 .person-container {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,45 +111,44 @@
   border-right: transparent;
   border-bottom-left-radius: 50%;
 }
-
-.torso-container {
-  position: absolute;
+.tronco-container{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  top: 80px;
-
-}
-
-.cuerpo {
-  position: absolute;
-  width: 60px;
+justify-content: center;
+  width: 100px;
   height: 100px;
-  background-color: blue;
-  margin-bottom: 20px;
+  border: 1px solid black;
 }
+.torso{
+position: absolute;
+z-index: 1;
+  background-color: blue;
+    width: 40px;
+  height: 90px;
+  border-radius: 50%;
 
-.brazo-izq,
-.brazo-der {
-  position: absolute;
+}
+.brazo-izq {
+  z-index: 2;
+  border-radius: 50%;
   width: 20px;
   height: 70px;
   background-color: green;
 }
 
-.brazo-izq {
-  margin-right: 30px;
-}
+.brazo-der {  
+  z-index: 2;
+  border-radius: 50%;
+  width: 20px;
+  height: 70px;
+  background-color: green;
 
-.brazo-der {
-  margin-left: 30px;
 }
 
 .inferior-container {
-  position: absolute;
+
   display: flex;
 
-  top: 180px;
 
 }
 

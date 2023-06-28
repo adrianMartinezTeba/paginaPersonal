@@ -17,12 +17,14 @@ const Person = () => {
           <div className="boca"></div>
         </div>
       </div>
-      <div className='torso-container'>
-        <div className='cuerpo'></div>
+      <div className='tronco-container'>
+        <div className='torso'></div>
         <div className='brazo-izq'></div>
         <div className='brazo-der'></div>
-      </div>
-      <div className='inferior-container'>
+        
+        </div>
+        <div className='inferior-container'>
+ 
         <div>
           <div className='pierna-izq'></div>
           <div className='zapato-izq'></div>
@@ -31,7 +33,6 @@ const Person = () => {
           <div className='pierna-der'></div>
           <div className='zapato-der'></div>
         </div>
-        <div className="tri"></div>
       </div>
     </div>
   )
