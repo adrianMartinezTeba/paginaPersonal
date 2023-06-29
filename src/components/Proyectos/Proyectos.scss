@@ -3,7 +3,9 @@
   flex-direction: column;
   width: 2000px; /* Ajusta el ancho según tus necesidades */
   height: 500px; /* Ajusta la altura según tus necesidades */
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .pas-sup {

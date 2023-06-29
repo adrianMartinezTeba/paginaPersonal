@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Proyectos.scss';
 import Person from '../Person/Person';
@@ -11,6 +11,12 @@ const Proyectos = () => {
     'https://st.depositphotos.com/1016440/2534/i/600/depositphotos_25344733-stock-photo-sunrise-at-the-beach.jpg',
     'https://i.blogs.es/ceda9c/dalle/450_1000.jpg'
   ];
+
+  const personDivRef = useRef(null);
+
+  const handleScroll = () => {
+    personDivRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
 
   return (
     <div>
@@ -26,17 +32,15 @@ const Proyectos = () => {
               </div>
             ))}
           </div>
-          <div className='person-div' style={{ '--position-x': position.x }}>
+          <div ref={personDivRef} className='person-div' style={{ '--position-x': position.x }}>
             <Person />
           </div>
         </div>
         <div className="pas-inf"></div>
       </div>
+      <button onClick={handleScroll}>Scroll</button>
     </div>
   );
 };
 
 export default Proyectos;
-
-
- 

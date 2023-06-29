@@ -23,10 +23,12 @@ const Person = () => {
 
   const moveLeft = () => {
     updatePosition({ ...position, x: position.x - 0.2 });
+    window.scrollBy(-10, 0); // Desplaza la ventana hacia la izquierda
   };
-
+  
   const moveRight = () => {
     updatePosition({ ...position, x: position.x + 0.2 });
+    window.scrollBy(10, 0); // Desplaza la ventana hacia la derecha
   };
   return (
     <div className='person-container'>
