@@ -1,6 +1,33 @@
-import React from 'react'
-import './Person.scss'
+import React, { useContext, useEffect } from 'react';
+import './Person.scss';
+import { PersonContext } from '../../context/PersonContext/PersonState';
+
 const Person = () => {
+  const { position, updatePosition } = useContext(PersonContext);
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'a') {
+        moveLeft();
+      } else if (event.key === 'd') {
+        moveRight();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [position]);
+
+  const moveLeft = () => {
+    updatePosition({ ...position, x: position.x - 0.2 });
+  };
+
+  const moveRight = () => {
+    updatePosition({ ...position, x: position.x + 0.2 });
+  };
   return (
     <div className='person-container'>
       <div className='cabeza-container'>
