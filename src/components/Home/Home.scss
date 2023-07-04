@@ -1,77 +1,91 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+.home-container{
+  display: flex;
+flex-direction: column;
+}
+.home-sup{
+background-image: url('/src/assets/imagenes/fondoHome.jpg');
+display: flex;
+align-items: end;
+z-index: 0;
+justify-content: space-between;
+}
+.divPerson-home{
+  z-index: 2;
+}
+.proy-div{
+  display: flex;
+  z-index: 1;
+}
+.proy-home-container{
+  height: 700px;
+  background-size: 100px;
+  width: 400px;
+  border: 1px solid black;
+  background-image: url('/src/assets/imagenes/ladrillosProyHome.jpg');
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+justify-content: end;
+align-items: center;
+
   
-  .buttons-container {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .museum-container {
-    position: relative;
-  }
-  
-  .building {
-    width: 200px;
-    height: 250px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  .title-museum {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-  }
-  
-  .entrance {
-    width: 60px;
-    height: 100px;
-    background-color: #dcdcdc;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .door {
-    width: 30px;
-    height: 80px;
-    background-color: #8b4513;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .windows {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .window {
-    width: 30px;
-    height: 40px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-  }
-  
-  .person {
-    width: 80px;
-    height: 160px;
-    background-color: #ff6347;
-    border-radius: 50%;
-  }
-  
+}
+.cartel-proy{
+  display: flex;
+  height: 30px;
+  width: 70px;
+  border: 1px solid black;
+justify-content: center;
+}
+.puerta-container{
+  margin-left: 30px;
+height: 400px;
+width: 300px;
+display: flex;
+justify-content: center;
+
+}
+.puerta{
+  display: flex;
+  border: 1px solid black;
+  height: 350px;
+  width: 150px;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+.pta-izq{
+  height: 350px;
+width:75px ;
+border-right: solid black 0.5px;
+background-color: #c6e0edd8 ;
+}
+.pta-der{
+  height: 350px;
+  width:75px ;
+  border-left: solid black 0.5px;
+  background-color: #c6e0edd8 ;
+}
+.timbre-container{
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  background-color: rgba(170, 155, 155, 0.789);
+}
+.timbre{
+  align-self: center;
+  background-color: black;
+  border-radius: 50%;
+
+width: 10px;
+height: 10px;
+}
+.bio-div{
+z-index: 1;
+}
+.home-inf{
+background-color: brown;
+height: 200px;
+}
