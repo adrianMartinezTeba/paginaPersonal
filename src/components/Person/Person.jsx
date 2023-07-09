@@ -1,51 +1,78 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Person.scss';
 import { PersonContext } from '../../context/PersonContext/PersonState';
 
+
 const Person = () => {
-  const { position, updatePosition } = useContext(PersonContext);
+  const { positionHome, positionProyectos,updatePositionProyectos,updatePositionHome,timbre,setTimbre } = useContext(PersonContext);
+const [andarIzq,setAndarIzq] = useState(false)
+const [andarAnimation, setAndarAnimation] = useState(false);
+useEffect(() => {
+  const handleKeyDown =  (event) => {
+    if (event.key === 'a') {
+      setAndarIzq(true);
+      setAndarAnimation(true)
+      moveLeft();
+    } else if (event.key === 'd') {
+      setAndarAnimation(true)
+      setAndarIzq(false);
+      moveRight();
+    }
+  };
+  const handleKeyUp = (event) => {
+    setAndarAnimation(false)
+    if (event.key === 'a' || timbre==='false') {
+    setAndarAnimation(false)
+    
+    } else if (event.key === 'd' || timbre==='false') {
+  setAndarAnimation(false)
 
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === 'a') {
-        moveLeft();
-      } else if (event.key === 'd') {
-        moveRight();
-      }
+    }
+  };
+if (timbre==='true') {
+  setAndarAnimation(true)
+ setAndarIzq(true)
+}
+  window.addEventListener('keydown', handleKeyDown);
+  window.addEventListener('keyup', handleKeyUp);
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+    window.removeEventListener('keyup', handleKeyUp);
     };
-
-    window.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [position]);
+  }, [positionHome,positionProyectos,andarIzq,andarAnimation,timbre]);
 
   const moveLeft = () => {
-    updatePosition({ ...position, x: position.x - 0.2 });
+    setAndarAnimation(true)
+    updatePositionHome({ ...positionHome, x: positionHome.x - 5});
+    // setAndarAnimation(false)
+    updatePositionProyectos({ ...positionProyectos, x: positionProyectos.x - 5 });
     window.scrollBy(-10, 0); // Desplaza la ventana hacia la izquierda
   };
   
   const moveRight = () => {
-    updatePosition({ ...position, x: position.x + 0.2 });
+    setAndarAnimation(true)
+    updatePositionHome({ ...positionHome, x: positionHome.x + 5});
+    // setAndarAnimation(false)
+    updatePositionProyectos({ ...positionProyectos, x:positionProyectos.x +5 });
     window.scrollBy(10, 0); // Desplaza la ventana hacia la derecha
   };
+
   return (
-    <div className='person-container'>
+    <div className={`person-container ${andarAnimation ? 'andar-animation' : ''}`}>
       <div className='cabeza-container'>
-        <div className='cabeza-sup'>
+        <div className={`cabeza-sup ${andarIzq ? 'andar-izq' : ''}`}>
           <div className='gorra1'></div>
-          <div className="gorra2"><div className='gorra-name'>FULL-STACK DEVELOPER</div>
+          <div className={`gorra2 ${andarIzq ? 'andar-izq' : ''}`}><div className='gorra-name'>FULL-STACK DEVELOPER</div>
             {/* <p>FULL-STACK DEVELOPER</p> */}
           </div>
         </div>
-        <div className='cabeza-inf'>
+        <div className={`cabeza-inf ${andarIzq ? 'andar-izq' : ''}`}>
           <div className="ceja"></div>
-          <div className="ojo">
+          <div className={`ojo ${andarIzq ? 'andar-izq' : ''}`}>
             <div className="pupila"></div>
           </div>
-          <div className="nariz"></div>
-          <div className="boca"></div>
+          <div className={`nariz ${andarIzq ? 'andar-izq' : ''}`}></div>
+          <div className={`boca ${andarIzq ? 'andar-izq' : ''}`}></div>
         </div>
       </div>
       <div className="cuello"></div>
@@ -55,12 +82,14 @@ const Person = () => {
           <div className="manga-izq"></div>
           <div className="bi-sup"></div>
           <div className="codo-izq"></div>
-          <div className="bi-inf"></div>
+          <div className="bi-inf">
+          <div className="antebrazo-izq"></div>
           <div className="mano-izq">
             <div className="dedo"></div>
             <div className="dedo"></div>
             <div className="dedo"></div>
             <div className="dedo"></div>
+          </div>
           </div>
         </div>
         <div className='torso'></div>
@@ -68,19 +97,21 @@ const Person = () => {
           <div className="manga-der"></div>
           <div className="bd-sup"></div>
           <div className="codo-der"></div>
-          <div className="bd-inf"></div>
+          <div className="bd-inf">
+          <div className="antebrazo-der"></div>
           <div className="mano-der">
             <div className="dedo"></div>
             <div className="dedo"></div>
             <div className="dedo"></div>
             <div className="dedo"></div>
           </div>
+          </div>
         </div>
       </div>
       <div className='inferior-container'>
-        <div className='pierna-izq'>
+        <div className={`pierna-izq ${andarIzq ? 'andar-izq' : ''}`}>
           <div className="masa-izq"></div>
-            <div className='zapato-izq'>
+            <div className={`zapato-izq ${andarIzq ? 'andar-izq' : ''}`}>
           <div className='cordones'>
               <div className="cordon"></div>
               <div className="cordon"></div>
@@ -88,9 +119,9 @@ const Person = () => {
             </div>
           </div>
         </div>
-        <div className='pierna-der'>
+        <div className={`pierna-der ${andarIzq ? 'andar-izq' : ''}`}>
           <div className="masa-der"></div>
-          <div className='zapato-der'>
+          <div className={`zapato-der ${andarIzq ? 'andar-izq' : ''}`}>
             <div className='cordones'>
               <div className="cordon"></div>
               <div className="cordon"></div>

@@ -1,33 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import './Home.scss';
 import Person from '../Person/Person';
+import { PersonContext } from '../../context/PersonContext/PersonState';
+import NavBar from '../NavBar/NavBar';
 const Home = () => {
+  const { positionHome, updatePositionHome,handleLLamarTimbre,timbre,setTimbre} = useContext(PersonContext);
+const navigate = useNavigate()
+
+useEffect(()=>{
+
+  if (positionHome.x<=-15) {
+
+  }
+},[positionHome,timbre])
   return (
     <div className="home-container">
       <div>
+        <NavBar/>
         <div className="home-sup">
           <div className="proy-div">
-            <Link to={'/proyectos'}>Proyectos</Link>
+          
             <div className="proy-home-container">
-              <div className="cartel-proy">Proyectos</div>
+              <div className="cartel-proy">Exposition</div>
               <div className="puerta-container">
                 <div className="puerta">
-                  <div className="pta-izq"></div>
-                  <div className="pta-der"></div>
-                </div>
-                <div className="timbre-container">
-                  <div className="timbre"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div className='divPerson-home'>
-            <Person/>
+          <div className='divPerson-home' style={{ '--position-x': positionHome.x }}>
+          <Person />
             </div>
-          <div className="bio-div">
-            <Link to={'/biografia'}>Biografía</Link>
-          </div>
         </div>
         <div className="home-inf"></div>
       </div>

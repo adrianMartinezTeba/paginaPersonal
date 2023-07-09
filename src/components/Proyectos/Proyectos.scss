@@ -28,7 +28,8 @@
   transform: translateX(calc(var(--position-x) * 100%));
 top: 230px;
   position: absolute;
-  transition: transform 1s ease;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 z-index: 2;
 }
 .cuadros-container{

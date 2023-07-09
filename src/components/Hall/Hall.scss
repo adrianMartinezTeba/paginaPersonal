@@ -1,0 +1,8 @@
+.divPerson-hall{
+    transform: translateX(calc(var(--position-x) * 100%));
+      position: absolute;
+      left: 700px;
+     transition-duration: 0.2s;
+     transition-timing-function: linear;
+    z-index: 2;
+  }

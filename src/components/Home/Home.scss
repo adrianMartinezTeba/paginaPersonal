@@ -5,16 +5,22 @@ flex-direction: column;
 .home-sup{
 background-image: url('/src/assets/imagenes/fondoHome.jpg');
 display: flex;
+flex-direction: row-reverse;
 align-items: end;
 z-index: 0;
 justify-content: space-between;
 }
 .divPerson-home{
+  transform: translateX(calc(var(--position-x) * 100%));
+    position: absolute;
+    left: 700px;
+   transition-duration: 0.2s;
+   transition-timing-function: linear;
   z-index: 2;
 }
 .proy-div{
   display: flex;
-  z-index: 1;
+  z-index: 2;
 }
 .proy-home-container{
   height: 700px;
@@ -27,15 +33,17 @@ justify-content: space-between;
   flex-direction: column;
 justify-content: end;
 align-items: center;
-
+margin-left: 80px;
   
 }
 .cartel-proy{
+  background-color: white;
   display: flex;
   height: 30px;
   width: 70px;
   border: 1px solid black;
 justify-content: center;
+
 }
 .puerta-container{
   margin-left: 30px;
@@ -43,28 +51,19 @@ height: 400px;
 width: 300px;
 display: flex;
 justify-content: center;
+z-index: 1;
 
 }
-.puerta{
+.puerta {
   display: flex;
   border: 1px solid black;
   height: 350px;
   width: 150px;
   align-self: flex-end;
   margin-right: 10px;
+  background-color: black;
 }
-.pta-izq{
-  height: 350px;
-width:75px ;
-border-right: solid black 0.5px;
-background-color: #c6e0edd8 ;
-}
-.pta-der{
-  height: 350px;
-  width:75px ;
-  border-left: solid black 0.5px;
-  background-color: #c6e0edd8 ;
-}
+
 .timbre-container{
   justify-content: center;
   display: flex;
