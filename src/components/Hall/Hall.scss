@@ -1,8 +1,53 @@
-.divPerson-hall{
-    transform: translateX(calc(var(--position-x) * 100%));
-      position: absolute;
-      left: 700px;
-     transition-duration: 0.2s;
-     transition-timing-function: linear;
-    z-index: 2;
-  }
+.hall-container{
+ height:  100%;
+ width: 100%;
+}
+.divPerson-hall {
+  transform: translateX(calc(var(--position-x) * 100%));
+  position: absolute;
+  left: 700px;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.hall-sup {
+  background-size: 500px;
+  background-image: url('/src/assets/imagenes/pared-hall.jpg');
+  height: 520px;
+  width: 1550px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hall-inf {
+  background-size: 100%;
+  background-image: url('/src/assets/imagenes/moqueta-mad.jpg');
+  height: 220px;
+  width: 1550px;
+}
+.puerta-projects{
+  width: 100px;
+  height: 400px;
+  background-color: black;
+}
+.cartel-proyectos{
+  display: flex;
+  background-color: aliceblue;
+  border: 1px solid black;
+  justify-content: center;
+  // .p{align-content:center;}
+}
+.puerta-bio{
+  width: 100px;
+  height: 400px;
+  background-color: black;
+}
+.cartel-bio{
+  background-color: aliceblue;
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+}

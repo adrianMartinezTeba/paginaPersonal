@@ -5,17 +5,16 @@ const PersonContext = createContext();
 
 // Crear el proveedor del contexto
 const PersonProvider = ({ children }) => {
-  const minPositionXHome = -19; // Límite izquierdo
-  const maxPositionXHome = 50; // Límite derecho
-  const minPositionXProy = 1; // Límite izquierdo
-  const maxPositionxProy = 52; // Límite derecho
-  const minPositionXHall = 1; // Límite izquierdo
-  const maxPositionxHall = 52; // Límite derecho
+  const minPositionXHome = -20; // Límite izquierdo
+  const maxPositionXHome = 24; // Límite derecho
+  const minPositionXProy = 0; // Límite izquierdo
+  const maxPositionxProy = 60; // Límite derecho
+  const minPositionXHall = -21; // Límite izquierdo
+  const maxPositionxHall = 25; // Límite derecho
 
-  const [positionHome, setPositionHome] = useState({ x: 0, y: 0 });
-  const [positionProyectos, setPositionProyectos] = useState({ x: 0, y: 0 });
+  const [positionHome, setPositionHome] = useState({ x: -20, y: 0 });
+  const [positionProyectos, setPositionProyectos] = useState({ x: 5, y: 0 });
   const [positionHall, setPositionHall] = useState({ x: 0, y: 0 });
-  const [timbre, setTimbre] = useState(false);
 
   // Definir función para actualizar la posición con límites para el contexto de Home
   const updatePositionHome = (newPosition) => {
@@ -35,14 +34,11 @@ const PersonProvider = ({ children }) => {
       setPositionHall(newPosition);
     }
   };
-  const handleLLamarTimbre = () => {
-    setTimbre(true)
-    updatePositionHome({x:-15})
-  };
+
   // Proporcionar el estado y las funciones a los componentes hijos
   return (
     <PersonContext.Provider
-      value={{ positionHome,handleLLamarTimbre,timbre,setTimbre, positionProyectos,positionHall, updatePositionHome, updatePositionProyectos,setPositionHall }}
+      value={{ positionHome, positionProyectos,positionHall, updatePositionHome, updatePositionProyectos,updatePositionHall }}
     >
       {children}
     </PersonContext.Provider>

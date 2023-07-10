@@ -9,8 +9,11 @@ flex-direction: row-reverse;
 align-items: end;
 z-index: 0;
 justify-content: space-between;
+height: 520px;
+  width: 100%;
 }
 .divPerson-home{
+  margin-bottom: 50px;
   transform: translateX(calc(var(--position-x) * 100%));
     position: absolute;
     left: 700px;
@@ -63,28 +66,36 @@ z-index: 1;
   margin-right: 10px;
   background-color: black;
 }
-
-.timbre-container{
-  justify-content: center;
-  display: flex;
-  align-self: center;
-  height: 30px;
-  width: 30px;
-  border: 1px solid black;
-  background-color: rgba(170, 155, 155, 0.789);
-}
-.timbre{
-  align-self: center;
-  background-color: black;
-  border-radius: 50%;
-
-width: 10px;
-height: 10px;
-}
 .bio-div{
 z-index: 1;
 }
 .home-inf{
-background-color: brown;
-height: 200px;
+  height: 220px;
+  width: 100%;
+display: flex;
+flex-direction: column;
+}
+.acera{
+  background-size: 150px;
+background-image: url('/src/assets/imagenes/acera.jpg');
+width: 100%;
+height:50px;
+}
+.carretera{
+  display: flex;
+  justify-content: space-evenly;
+  background-size: 150px;
+background-image: url('/src/assets/imagenes/asfalto.jpg');
+width: 100%;
+height:100%;
+}
+.raya-disc{
+  align-self: center;
+width: 100px;
+height: 10px;
+background-color: white;
+border: 1px solid black;
+}
+.navBar-Hall{
+ position: absolute;
 }
