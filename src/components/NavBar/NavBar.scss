@@ -1,25 +1,35 @@
 .navBar-container{
     display: flex;
     align-items: center;
-    height: 50px;
-    width: 100%;
-    background-color: rgb(20, 148, 116);
-    position: fixed;
+padding: 5px;
+    width: 100vw;
+    height: 7vh;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 70%, white 100%);
+position: fixed;
     z-index: 5;
-    margin-top: -10px;
+    // margin-top: -10px;
 
 }
 .btn-navBar{
-    margin-left: 15px;
+
+  
+    padding: 5px;
+    // border: 1px solid white;
+    margin-left: 20px;
    text-decoration: none;
-   color: aliceblue;
-   
+   color: aliceblue;  
+   transition: transform 0.1s
 }
 .btn-navBar:hover{
-    border: 1px solid white;
-    border-radius: 10%;
+    transform: scale(1.2);
+    // background-image: radial-gradient(black 60%,white 100%);
+    border: transparent;
+    border-radius: 100%;
+    box-shadow: 0 0 8px 0 rgb(124, 113, 113), 0 0 20px 0 rgba(255, 254, 254, 0.86);
 }
 .img-pag{
+    margin-top: 3px;
+    margin-bottom: 3px;
     width: 30px;
     border-radius: 50%;
     justify-self: flex-end;

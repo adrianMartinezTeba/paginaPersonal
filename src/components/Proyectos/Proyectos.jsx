@@ -25,9 +25,8 @@ if (positionProyectos.x===0) {
 },[positionProyectos])
 
   return (
-    <div>
       <div className='proyectos-container'>
-     <NavBar/>
+        <NavBar/>
         <div className='pas-sup'>
           <div className="pta-hall-container">
             <div className="cartel-hall"><p>Hall</p></div>
@@ -49,8 +48,8 @@ if (positionProyectos.x===0) {
         </div>
         <div className="pas-inf"></div>
       </div>
-    </div>
-  );
+    
+    );
 };
 
 export default Proyectos;

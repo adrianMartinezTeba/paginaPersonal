@@ -21,7 +21,6 @@ const Hall = () => {
     }
     },[positionHall])
     return (
-        <div>
             <div className='hall-container'>
                 <NavBar/>
                 <div className='hall-sup'>
@@ -43,7 +42,6 @@ const Hall = () => {
                 </div>
                     <div className="hall-inf"></div>
             </div>
-        </div>
     )
 }
 

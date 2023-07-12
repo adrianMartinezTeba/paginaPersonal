@@ -1,22 +1,22 @@
 .proyectos-container {
   display: flex;
   flex-direction: column;
-width: fit-content ;
-  overflow: auto;
-  scroll-behavior: smooth;
+  width: fit-content ;
+height: 97.5vh;//pq el 2.5 es del scroll
 }
 
 .pas-sup {
   display: flex;
   background-size: 500px;
   background-image: url('/src/assets/imagenes/pared-hall.jpg');
-  height: 520px;
-  width: 100%;
+  height: 70vh;
+  width: fit-content;
 
 }
 
 .pas-inf {
-  height: 220px;
+  border-top: 1px black solid;
+ height: 30vh;
   width: 100%;
   background-size: 100%;
   background-image: url('/src/assets/imagenes/moqueta-mad.jpg');
@@ -25,7 +25,7 @@ width: fit-content ;
 
 .person-div {
   transform: translateX(calc(var(--position-x) * 100%));
-  margin-top: 320px;
+  margin-top: 300px;
   position: absolute;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -54,17 +54,21 @@ margin-right: 300px;
 ;
 }
 .puerta-hall{
-  width: 100px;
-  height: 400px;
-  background-color: black;
+  width: 7.5vw;
+  height: 380px;
+  background: linear-gradient(to bottom left, #000000,  #6d6d6c);
 }
 .cartel-hall{
+  margin-bottom: 10px;
   height: 30px;
   background-color: aliceblue;
   display: flex;
   border: 1px solid black;
   justify-content: center;
+  border-radius: 10%;
+  box-shadow: 0 0 8px 5px rgb(120, 119, 108);
  align-items: center;
+
 }
 .cuadro{
   display: flex;

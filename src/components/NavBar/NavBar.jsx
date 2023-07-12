@@ -12,24 +12,14 @@ const NavBar = () => {
     updatePositionHall({ x:0 })
   }
   return (
-    <div>
       <div className='navBar-container'>
-      
           <img className='img-pag' src={Yo} alt="yo en la albufera de valencia" />
-        <div  onClick={handlePosition}>
-          <Link className='btn-navBar' to={'/'}>Home</Link>
-        </div>
-        <div onClick={handlePosition}>
-          <Link  className='btn-navBar' to={'/hall'}>Hall</Link>
-        </div>
-        <div onClick={handlePosition}>
-          <Link  className='btn-navBar'  to={'/proyectos'}>My Projects</Link>
-        </div>
-        <div  onClick={handlePosition}>
-          <Link className='btn-navBar' to={'/biografia'}>About me</Link>
-        </div>
+          <Link className='btn-navBar' onClick={handlePosition} to={'/'}>Home</Link>
+          <Link  className='btn-navBar' onClick={handlePosition} to={'/hall'}>Hall</Link>
+          <Link  className='btn-navBar' onClick={handlePosition}  to={'/proyectos'}>My Projects</Link>
+          <Link className='btn-navBar' onClick={handlePosition} to={'/biografia'}>About me</Link>
       </div>
-    </div>
+
   );
 }
 
