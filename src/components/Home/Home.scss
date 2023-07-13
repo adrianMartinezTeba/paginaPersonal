@@ -3,6 +3,16 @@
 flex-direction: column;
 height: 100vh;
 }
+.info-box{
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  margin-left: 400PX;
+  margin-top: 100PX;
+}
 .home-sup{
 background-image: url('/src/assets/imagenes/fondoHome.jpg');
 display: flex;

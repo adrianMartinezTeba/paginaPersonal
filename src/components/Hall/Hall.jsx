@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { PersonContext } from '../../context/PersonContext/PersonState';
 import NavBar from '../NavBar/NavBar';
 import './Hall.scss'
+import Footer from '../Footer/Footer';
 
 const Hall = () => {
     const navigate = useNavigate()
@@ -41,6 +42,7 @@ const Hall = () => {
                     </div>
                 </div>
                     <div className="hall-inf"></div>
+                    <Footer/>
             </div>
     )
 }

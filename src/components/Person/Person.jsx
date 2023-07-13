@@ -1,62 +1,79 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './Person.scss';
 import { PersonContext } from '../../context/PersonContext/PersonState';
 
-
 const Person = () => {
   const { positionHome, positionProyectos, positionHall, updatePositionProyectos, updatePositionHome, updatePositionHall } = useContext(PersonContext);
-  const [andarIzq, setAndarIzq] = useState(false)
+  const [andarIzq, setAndarIzq] = useState(false);
   const [andarAnimation, setAndarAnimation] = useState(false);
+  const elementRef = useRef(null);
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'a') {
         setAndarIzq(true);
-        setAndarAnimation(true)
+        setAndarAnimation(true);
         moveLeft();
       } else if (event.key === 'd') {
-        setAndarAnimation(true)
+        setAndarAnimation(true);
         setAndarIzq(false);
         moveRight();
       }
     };
+
     const handleKeyUp = (event) => {
-      setAndarAnimation(false)
-      if (event.key === 'a') {
-        setAndarAnimation(false)
-
-      } else if (event.key === 'd') {
-        setAndarAnimation(false)
-
-      }
+      setAndarAnimation(false);
     };
+
     window.addEventListener('keydown', handleKeyDown);
     window.addEventListener('keyup', handleKeyUp);
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [positionHall, positionHome, positionProyectos, andarIzq, andarAnimation]);
+  }, [positionHall, positionHome, positionProyectos]);
+
+  const scrollBySmooth = (scrollOffset, duration) => {
+    const start = window.scrollX;
+    const startTime = performance.now();
+
+    const animateScroll = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const scrollAmount = start + scrollOffset * progress;
+
+      window.scrollTo(scrollAmount, 0);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(animateScroll);
+      }
+    };
+
+    window.requestAnimationFrame(animateScroll);
+  };
 
   const moveLeft = () => {
-    setAndarAnimation(true)
+    setAndarAnimation(true);
     updatePositionHome({ ...positionHome, x: positionHome.x - 5 });
-    // setAndarAnimation(false)
     updatePositionProyectos({ ...positionProyectos, x: positionProyectos.x - 5 });
-    updatePositionHall({ ...positionHall, x: positionHall.x - 5 })
-    window.scrollBy(-10, 0); // Desplaza la ventana hacia la izquierda
+    updatePositionHall({ ...positionHall, x: positionHall.x - 5 });
+    scrollBySmooth(-120, 300); // Desplazamiento suave hacia la izquierda durante 1 segundo
   };
 
   const moveRight = () => {
-    setAndarAnimation(true)
+    setAndarAnimation(true);
     updatePositionHome({ ...positionHome, x: positionHome.x + 5 });
-    // setAndarAnimation(false)
     updatePositionProyectos({ ...positionProyectos, x: positionProyectos.x + 5 });
-    updatePositionHall({ ...positionHall, x: positionHall.x + 5 })
-    window.scrollBy(10, 0); // Desplaza la ventana hacia la derecha
+    updatePositionHall({ ...positionHall, x: positionHall.x + 5 });
+    scrollBySmooth(120, 300); // Desplazamiento suave hacia la derecha durante 1 segundo
   };
 
   return (
-    <div className={`person-container ${andarAnimation ? 'andar-animation' : ''}`}>
+    <div
+      className={`person-container ${andarAnimation ? 'andar-animation' : ''}`}
+      ref={elementRef}
+    >
       <div className='cabeza-container'>
         <div className={`cabeza-sup ${andarIzq ? 'andar-izq' : ''}`}>
           <div className='gorra1'></div>

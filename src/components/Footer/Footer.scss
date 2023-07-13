@@ -1,0 +1,12 @@
+.footer-container {
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 70%, white 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0; /* Añade esta propiedad para fijar el footer en la parte inferior */
+    width: 100%; /* Añade esta propiedad para asegurar que el footer ocupe todo el ancho */
+    height: 7vh;
+    z-index: 6;
+    align-items: center;
+  }

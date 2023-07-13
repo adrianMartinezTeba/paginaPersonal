@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Person from '../Person/Person';
 import { PersonContext } from '../../context/PersonContext/PersonState';
 import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
 
 const Proyectos = () => {
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ if (positionProyectos.x===0) {
     navigate('/hall')
   }, 300);
 }
+window.scrollTo(personDivRef)
 },[positionProyectos])
 
   return (
@@ -47,6 +49,7 @@ if (positionProyectos.x===0) {
           </div>
         </div>
         <div className="pas-inf"></div>
+        <Footer/>
       </div>
     
     );
