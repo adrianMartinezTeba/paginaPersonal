@@ -1,17 +1,37 @@
 .home-container{
   display: flex;
 flex-direction: column;
-height: 100vh;
+height: 94vh;
 }
 .info-box{
-  height: 50vh;
-  width: 50vw;
+  height: fit-content;
+  width: 40vw;
+  padding: 10px;
   position: absolute;
   z-index: 10;
   display: flex;
   flex-direction: column;
   margin-left: 400PX;
-  margin-top: 100PX;
+  margin-top: 80PX;
+  border: 1px solid black;
+  background-color: white;
+  
+}
+.btn-inf{
+  width: fit-content;
+  align-self: flex-end;
+  margin-top: 10px;
+ &:hover{
+    cursor: pointer;
+  }
+}
+
+.linkBio{
+
+}
+.video-tut{
+  // width: 200px;
+  // height: 100px;
 }
 .home-sup{
 background-image: url('/src/assets/imagenes/fondoHome.jpg');

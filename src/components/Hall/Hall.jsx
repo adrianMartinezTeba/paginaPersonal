@@ -36,7 +36,7 @@ const Hall = () => {
                     </div>
                     <div className='pta-bio-container'>
                         <div className="cartel-bio">
-                            <p>Biografia</p>
+                            <p>Currículum Vitae</p>
                         </div>
                         <div className="puerta-bio"></div>
                     </div>
