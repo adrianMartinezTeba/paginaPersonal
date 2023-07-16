@@ -1,11 +1,44 @@
 .bio-container{
     display: flex;
     flex-direction: column;
+    font-size: larger;
     // align-items: center;
-    height:87vh;
+    height:auto;
 padding-top: 80px;
 padding-left: 30px;
-background-image: linear-gradient(to bottom right,rgba(94, 107, 163, 0.795) 90%,white 100%);
+padding-bottom: 80px;
 
+overflow-y: auto;
 color: white;
+
 }
+.bio-prinpipalDiv{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,rgba(94, 107, 163, 0.795) 90%,white 100%);
+}
+.btn-expandir{
+    background-color: transparent;
+    margin-left: 5px;
+}
+.btn-goToHall{
+    width: fit-content;
+    margin-bottom: 5px;
+}
+/* Clase para animar la entrada de un elemento li desde la izquierda */
+.animate-left-to-right-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  /* Clase para animar la entrada de un elemento li desde la derecha */
+  .animate-right-to-left-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  /* Clase para la animación de transición cuando un elemento li entra */
+  .animate-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+  }

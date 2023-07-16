@@ -28,7 +28,6 @@ window.scrollTo(personDivRef)
 
   return (
       <div className='proyectos-container'>
-        <NavBar/>
         <div className='pas-sup'>
           <div className="pta-hall-container">
             <div className="cartel-hall"><p>Hall</p></div>
@@ -49,7 +48,7 @@ window.scrollTo(personDivRef)
           </div>
         </div>
         <div className="pas-inf"></div>
-        <Footer/>
+
       </div>
     
     );

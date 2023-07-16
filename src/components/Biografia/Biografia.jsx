@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import './Biografia.scss';
+import { useNavigate } from "react-router-dom";
+import { PersonContext } from '../../context/PersonContext/PersonState';
 
 const Biografia = () => {
+  const { updatePositionHall } = useContext(PersonContext);
+  const navigate=useNavigate()
   const headerTexts = [
     'Experiencia Laboral',
     'Educación',
@@ -12,7 +16,8 @@ const Biografia = () => {
   ];
 
   const [headers, setHeaders] = useState([]); // Estado para almacenar los encabezados con sus estados de animación
-  const [expandedHeader, setExpandedHeader] = useState(null); // Estado para controlar el encabezado expandido
+  const [expandedHeaders, setExpandedHeaders] = useState([]); // Estado para controlar los encabezados expandidos
+
 
   useEffect(() => {
     // Función para mostrar la siguiente letra del encabezado
@@ -43,7 +48,7 @@ const Biografia = () => {
     const headerIntervals = initialHeaders.map((header, index) => {
       const intervalId = setInterval(() => {
         showNextLetter(index, intervalId);
-      }, 100); // Tiempo entre la aparición de cada letra (ajusta el intervalo según tu preferencia)
+      }, 200); // Tiempo entre la aparición de cada letra (ajusta el intervalo según tu preferencia)
 
       return intervalId;
     });
@@ -56,36 +61,68 @@ const Biografia = () => {
 
   // Función para manejar el clic en el botón para desplegar la información de un encabezado
   const handleToggleContent = (index) => {
-    setExpandedHeader((prevExpandedHeader) => (prevExpandedHeader === index ? null : index));
+    setExpandedHeaders((prevExpandedHeaders) => {
+      if (prevExpandedHeaders.includes(index)) {
+        // Si el encabezado ya está expandido, lo eliminamos del array
+        return prevExpandedHeaders.filter((headerIndex) => headerIndex !== index);
+      } else {
+        // Si el encabezado no está expandido, lo agregamos al array
+        return [...prevExpandedHeaders, index];
+      }
+    });
   };
+const handleNavToHall = () =>{
+  navigate('/hall')
+  updatePositionHall({x:0})
+}
 
   return (
-    <div>
-      <NavBar />
+    <div className='bio-prinpipalDiv'>
+      {/* <NavBar /> */}
       <div className='bio-container'>
         {headers.map((header, index) => (
           <section key={index}>
             <h3>
               {header.text}
-              <button onClick={() => handleToggleContent(index)}>
-                {expandedHeader === index ? '-' : '+'}
+              <button className='btn-expandir' onClick={() => handleToggleContent(index)}>
+                {expandedHeaders.includes(index) ? '-' : '+'}
               </button>
             </h3>
-            {expandedHeader === index && ( // Mostrar el contenido solo si el encabezado está expandido
+            {expandedHeaders.includes(index) && ( // Mostrar el contenido solo si el encabezado está expandido
               <ul>
                 {header.fullText === 'Experiencia Laboral' && (
-                  <li>
-                    <h4>Nombre de la Compañía</h4>
-                    <p>Fecha de inicio - Fecha de finalización</p>
-                    <p>Descripción de las responsabilidades y logros en el puesto.</p>
-                  </li>
+                  <ul>
+                    <li>
+                      <h4>ServiBal</h4>
+                      <p>2019/09 - 2019/12</p>
+                      <p>Mozo de almacén.</p>
+                    </li>
+                    <li>
+                      <h4>Domino's Pizza</h4>
+                      <p>2020/02 - 2022/12</p>
+                      <p>Repartidor,camarero,cocinero y responsable de turno.</p>
+                    </li>
+                    <li>
+                      <h4>Federación de Fútbol de la Comunidad Valenciana</h4>
+                      <p>2021/04 - Actualidad</p>
+                      <p>Árbitro de fútbol</p>
+                    </li>
+                  </ul>
                 )}
                 {header.fullText === 'Educación' && (
-                  <li>
-                    <h4>Título Académico</h4>
-                    <p>Nombre de la Institución</p>
-                    <p>Año de graduación</p>
-                  </li>
+                  <ul>
+                    <li>
+                      <h4>Bachillerato</h4>
+                      <p>La Purísima(Torrent)</p>
+                      <p>Año de graduación:2015</p>
+                      <li>
+                      <h4>Bootcamp Full Stack Web Developer</h4>
+                      <p>The Bridge by EDEM</p>
+                      <p>Año de graduación:2023/06</p>
+                      </li>
+                    </li>
+                  </ul>
+
                 )}
                 {header.fullText === 'Habilidades Técnicas' && (
                   <ul>
@@ -111,7 +148,7 @@ const Biografia = () => {
           </section>
         ))}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

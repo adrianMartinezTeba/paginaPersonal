@@ -7,11 +7,13 @@ import { PersonProvider } from './context/PersonContext/PersonState';
 import Person from './components/Person/Person';
 import Hall from './components/Hall/Hall';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
     <BrowserRouter>
       <PersonProvider>
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/hall' element={<Hall/>}/>
@@ -19,6 +21,7 @@ function App() {
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/person" element={<Person />} />
         </Routes>
+        <Footer/>
       </PersonProvider>
     </BrowserRouter>
   );

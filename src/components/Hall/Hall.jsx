@@ -23,7 +23,7 @@ const Hall = () => {
     },[positionHall])
     return (
             <div className='hall-container'>
-                <NavBar/>
+            
                 <div className='hall-sup'>
                     <div className='pta-pro-container'>
                         <div className="cartel-proyectos">
@@ -42,7 +42,7 @@ const Hall = () => {
                     </div>
                 </div>
                     <div className="hall-inf"></div>
-                    <Footer/>
+           
             </div>
     )
 }

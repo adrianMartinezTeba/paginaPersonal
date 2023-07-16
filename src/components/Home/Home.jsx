@@ -33,11 +33,10 @@ const handleHideInfoBox = () => {
 
   return (
     <div className="home-container">
-      <NavBar/>
       {showInfoBox && (
         <div className="info-box">
           <h2>¡¡Información importante!!</h2>
-          <p>Bienvenido a mi página portfolio,he querido simular un "videojuego" en el que puedes manejar un personaje(mover a la izquierda pulsa "A" y a la derecha "D") para moverte por la página y ver mi trabajos o puedes acceder a mi curriculum pinchando <span className='linkBio'>
+          <p>Bienvenido a mi página portfolio,he querido hacer una página interactiva en la que puedes manejar un personaje(mover a la izquierda pulsa "A" y a la derecha "D") para moverte por la página y ver mi trabajos o puedes acceder a mi curriculum pinchando <span className='linkBio'>
             <Link  to={'/biografia'}>aquí.</Link>
           </span> Además puedes usar la barra de navegación por si se hace tedioso manejar el personaje y quieres ir al grano.</p>
           <p>Si quieres ir navegando por mi página con el personaje solo ves andando hasta las puertas para ir entrando a las "salas" correspondientes.Te dejo un video para que entiendas mejor como "pasear" por mi página.</p>
@@ -77,7 +76,6 @@ const handleHideInfoBox = () => {
             <div className="raya-disc"></div>
           </div>
         </div>
-        <Footer/>
     </div>
   );
 };
