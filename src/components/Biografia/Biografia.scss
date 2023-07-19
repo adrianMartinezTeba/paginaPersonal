@@ -1,44 +1,95 @@
 .bio-container{
     display: flex;
     flex-direction: column;
-    font-size: larger;
-    // align-items: center;
-    height:auto;
+    height:77vh;
 padding-top: 80px;
 padding-left: 30px;
 padding-bottom: 80px;
-
+background-image: linear-gradient(to bottom right,rgba(94, 107, 163, 0.795) 90%,white 100%);
 overflow-y: auto;
 color: white;
+align-items: center;
+
 
 }
-.bio-prinpipalDiv{
-    height: 100vh;
-    background-image: linear-gradient(to bottom right,rgba(94, 107, 163, 0.795) 90%,white 100%);
+
+.navBio{
+    height: fit-content;
+    display: flex;
+   justify-content: center;
 }
-.btn-expandir{
-    background-color: transparent;
-    margin-left: 5px;
+.nav-item{
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 15px;
+    
+    
 }
-.btn-goToHall{
-    width: fit-content;
-    margin-bottom: 5px;
+.infCV{
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-right: 20px;
+margin-top: 100px;
+border: 1px solid white;
+background-color: black;
+box-shadow: 0 0 8px 0 rgb(124, 113, 113), 0 0 20px 0 rgba(255, 254, 254, 0.86);
+
+h2{
+    margin-bottom: 10px;
+    text-decoration: underline;
 }
-/* Clase para animar la entrada de un elemento li desde la izquierda */
-.animate-left-to-right-enter {
-    opacity: 0;
-    transform: translateX(-100%);
+p{
+    padding: 5px;
+}
+
+}
+.infCV-hor{
+    margin:50px;
+    border: 1px solid white;
+background-color: black;
+box-shadow: 0 0 8px 0 rgb(124, 113, 113), 0 0 20px 0 rgba(255, 254, 254, 0.86);
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    li{
+        padding: 5px;
+        border: 1px solid white;
+        margin: 20px;
+        
+    }
+}
+}
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 30vw;
   }
   
-  /* Clase para animar la entrada de un elemento li desde la derecha */
-  .animate-right-to-left-enter {
-    opacity: 0;
-    transform: translateX(100%);
+  .bar-container {
+    display: flex;
+    
+    height: 40px;
+    justify-content: flex-start;
+    background-color:rgba(134, 151, 225, 0.795);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px;
+    
   }
   
-  /* Clase para la animación de transición cuando un elemento li entra */
-  .animate-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.5s, transform 0.5s;
+  .bar {
+   display: flex;
+   justify-content: center;
+  }
+  
+  .label {
+    
+
+    font-weight: bold;
+    color: white;
   }
