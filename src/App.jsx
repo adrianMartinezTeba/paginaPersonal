@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/home/home';
-import Biografia from './components/biografia/biografia';
-import Proyectos from './components/proyectos/proyectos';
+import Home from './components/Home/Home';
+import Biografia from './components/Biografia/Biografia';
+import Proyectos from './components/Proyectos/Proyectos';
 import { PersonProvider } from './context/PersonContext/PersonState';
 import Person from './components/Person/Person';
 import Hall from './components/Hall/Hall';
