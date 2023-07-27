@@ -3,9 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './Home.scss';
 import Person from '../Person/Person';
 import { PersonContext } from '../../context/PersonContext/PersonState';
-import NavBar from '../NavBar/NavBar';
-import Footer from '../Footer/Footer';
-import VideoEj from '../../assets/video/grabacionOk.mp4'
+import VideoEj from '../../assets/video/preview.mp4'
 const Home = () => {
   const { positionHome, updatePositionHall} = useContext(PersonContext);
   const [showInfoBox, setShowInfoBox] = useState(false);

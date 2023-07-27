@@ -1,8 +1,30 @@
 .proyectos-container {
   display: flex;
   flex-direction: column;
-  width: fit-content ;
+  width: 100vw ;
 height: 97.5vh;//pq el 2.5 es del scroll
+}
+.infoExtended{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+background-color: white;
+  justify-content: center;
+  margin-bottom: 10px;
+  ul{
+    li{
+      max-width: 400px;
+    }
+  }
+}
+.inf-sup{
+padding: 5px;
+width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
 }
 
 .pas-sup {
@@ -10,7 +32,7 @@ height: 97.5vh;//pq el 2.5 es del scroll
   background-size: 500px;
   background-image: url('/src/assets/imagenes/pared-hall.jpg');
   height: 70vh;
-  width: fit-content;
+  width: 100vw;
 
 }
 
@@ -32,21 +54,19 @@ height: 97.5vh;//pq el 2.5 es del scroll
 z-index: 2;
 }
 .cuadros-container{
-margin-left: 600px;
-margin-right: 300px;
-  justify-content: space-evenly;
+  margin-left: 30vw;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   z-index: 1;
 
 }
 .proyecto-imgInd{
   width: 150px;
 }
-.cuadro{
-  margin-left: 250px;
-  margin-top: 70px;
-  align-self: center;
-}
+
 .pta-hall-container{
   display: flex;
   flex-direction: column;
@@ -73,6 +93,7 @@ margin-right: 300px;
 .cuadro{
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 .marco{
   padding: 10px;
