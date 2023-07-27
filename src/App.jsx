@@ -8,10 +8,12 @@ import Person from './components/Person/Person';
 import Hall from './components/Hall/Hall';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import RedirectComponent from './components/RedirectComponent/RedirectComponent';
 
 function App() {
   return (
     <BrowserRouter>
+    <RedirectComponent/>
       <PersonProvider>
         <NavBar/>
         <Routes>
