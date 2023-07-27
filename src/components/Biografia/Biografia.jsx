@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { motion } from "framer-motion"
 import './Biografia.scss';
-import { PersonContext } from '../../context/PersonContext/PersonState';
-import html from '../../assets/iconoCer/html.png'
-import css from '../../assets/iconoCer/css.png'
-import wdf from '../../assets/iconoCer/fundamentosWeb.png'
-import js from '../../assets/iconoCer/js.png'
-import es6 from '../../assets/iconoCer/es6.jpeg'
-import sql from '../../assets/iconoCer/sql.png'
 const Biografia = () => {
-  const { updatePositionHall } = useContext(PersonContext);
   const secciones = [
     'Experiencia Laboral',
     'Educación',
@@ -49,18 +41,15 @@ const Biografia = () => {
       añoGraduacion: 'Año de graduación:2023/06'
     },
   ]
-  const proyectos = [
+  const proyectos = 
     {
-      titulo: 'Proyecto 1',
-      descripcion: 'Desarrollo de una aplicación web para gestionar tareas.',
-      tecnologias: 'React, Node.js, MongoDB',
-    },
-    {
-      titulo: 'Proyecto 2',
-      descripcion: 'Aplicación móvil para rastrear hábitos de salud y bienestar.',
-      tecnologias: 'React Native, Firebase',
-    },
-  ];
+      titulo: 'Portfolio',
+      descripcion: 'Mi portfolio personal interactivo donde puedes conocerme.',
+      url:'',
+      frontend:'https://github.com/adrianMartinezTeba/paginaPersonal',
+      tecnologias: 'React, Node.js, Framer-motion,SASS,HTML,CSS',
+    }
+   
 
   const idiomas = [
     {
@@ -250,15 +239,13 @@ const Biografia = () => {
           <motion.div initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }} className='infCV'>
-           
-              {proyectos.map((proy, index) => (
-                <div className='card-cont' key={index}>
-                  <h2>{proy.titulo}</h2>
-                  <p>Descripción:{proy.descripcion}</p>
-                  <p>Tecnologías:{proy.tecnologias}</p>
+                <div className='card-cont'>
+                  <h2>{proyectos.titulo}</h2>
+                  <p>Descripción:{proyectos.descripcion}</p>
+                  <p>GitHub Frontend: <a href="https://github.com/adrianMartinezTeba/paginaPersonal" target='blank'>{proyectos.frontend}</a></p>
+                  <p>Url del proyecto: {proyectos.url}</p>
+                  <p>Tecnologías:{proyectos.tecnologias}</p>
                 </div>
-              ))}
-       
           </motion.div>
         )}
         {seccionActiva === 3 && (

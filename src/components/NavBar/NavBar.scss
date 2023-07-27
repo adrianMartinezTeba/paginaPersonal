@@ -36,3 +36,7 @@ position: fixed;
     justify-self: flex-end;
     margin-left: 15px;
 }
+@media (max-width: 767px) {
+    .navBar-container {
+        display: none;
+      }}

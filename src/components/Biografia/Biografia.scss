@@ -4,6 +4,7 @@
     padding-top: 80px;
     padding-left: 30px;
     padding-bottom: 80px;
+    
     background-image: linear-gradient(to bottom right, rgba(94, 107, 163, 0.795) 90%, white 100%);
     overflow-y: auto;
     color: white;
@@ -145,7 +146,121 @@
 
 .label {
 
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     color: white;
 }
+/* Estilos para dispositivos con ancho de pantalla menor a 768px (móviles) */
+@media (max-width: 767px) {
+
+    .bio-container {
+     
+     height: 76vh;
+     max-height:75.5vh;   /* Ajustar estilos según tus necesidades para dispositivos móviles */
+      display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  .navBio{
+    position: sticky;
+    margin-top: -50px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+    .contenidoCV {
+        margin-top: 50px;
+        margin-right: 10px;
+        margin-left: 10px;
+        max-height:76vh; 
+ display: flex;
+ justify-content: flex-start;
+    }
+  .infCV{
+    overflow: auto;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    margin: 0;
+    max-height:45vh;
+    width: 80vw;
+    .card-cont{  
+        overflow: auto;
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            text-decoration: underline;
+        }
+        p{
+            word-wrap: break-word;
+            margin-top: 5px;
+        }
+    }
+  }
+  .infCV-hor{
+    overflow: auto;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    margin: 0;
+    max-height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+.card-cont{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        width: 300px;
+        h2{
+            text-decoration: underline;
+        }
+        p{
+            margin-top: 5px;
+        }
+    }
+  }
+  .chart-container{
+    height: 200px;
+    width: 300px;
+    .bar{
+        .label{
+            font-weight: bold;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+  }
+  .sobremi-container{
+    overflow: auto;
+    overflow-y: auto;
+    margin: 0;
+    width: 80vw;
+    max-height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-cont{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            text-decoration: underline;
+        }
+        p{
+            margin-top: 5px;
+        }
+    }}
+   
+  }
+  

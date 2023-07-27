@@ -3,7 +3,7 @@ import './Footer.scss'
 const Footer = () => {
   return (
     <div className='footer-container'>
-      <p>E-mail: adrianmartineztebawork@gmail.com</p>
+      <p>Contacto: adrianmartineztebawork@gmail.com</p>
     </div>
   )
 }
