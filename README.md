@@ -146,6 +146,16 @@ Para configurar el proyecto en tu máquina local, sigue estas instrucciones:
 3. Ejecuta el comando `npm install` para instalar las dependencias.
 4. Una vez que se completen las instalaciones, ejecuta `npm start` para iniciar la aplicación en tu navegador.
 
+## Despliegue
+
+La página está desplegada en Internet utilizando Vercel y puedes visitarla en el siguiente enlace: [https://portfolio-adrianmartinezteba.vercel.app/](https://portfolio-adrianmartinezteba.vercel.app/)
+
+Haz clic en el enlace proporcionado para acceder directamente a mi portfolio en vivo, donde podrás experimentar la página interactiva y explorar mis proyectos y curriculum. ¡Espero que lo disfrutes!
+
+Si tienes algún problema con el enlace o encuentras algún error en la página, no dudes en contactarme a través de mi correo electrónico [adrianmartineztebawork@gmail.com](mailto:adrianmartineztebawork@gmail.com). Agradezco tus comentarios y sugerencias para mejorar mi portfolio.
+
+¡Gracias por tu interés en mi trabajo! 😊
+
 ## Contacto
 
 Si tienes alguna pregunta, deseas colaborar o tienes algún consejo o sugerencia, no dudes en escribirme a adrianmartineztebawork@gmail.com. ¡Espero que disfrutes explorando mi portfolio!
