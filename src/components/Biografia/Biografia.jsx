@@ -331,17 +331,17 @@ const Biografia = () => {
          {seccionActiva === 7 && (
           <motion.div initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }} className='sobremi-container'>
+            transition={{ duration: 1.5 }} className='infCV'>
             
              
               <div className='card-cont'>
-                <h2>Contacto y redes</h2>
+                <h2>Contacto y redes sociales</h2>
                 <h4>Correo</h4>
-                <p>adrianmartinezteba@gmail.com</p>
+                <p>adrianmartineztebawork@gmail.com</p>
                 <h4>Linkdin</h4>
                 <p><a href="https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/">https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/</a></p>
                 <h4>GitHub</h4>
-                <p><a href="https://github.com/adrianMartinezTeba"></a> https://github.com/adrianMartinezTeba</p>
+                <p><a href="https://github.com/adrianMartinezTeba/">https://github.com/adrianMartinezTeba</a> </p>
               </div>
           </motion.div>
         )}
