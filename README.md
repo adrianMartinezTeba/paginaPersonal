@@ -9,6 +9,7 @@
 - [Tecnologías](#tecnologías)
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
+- [Despliegue](#despliegue)
 - [Contacto](#contacto)
 
 ## Descripción
