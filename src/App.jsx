@@ -17,7 +17,7 @@ function App() {
       <PersonProvider>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path='/hall' element={<Hall/>}/>
           <Route path="/biografia" element={<Biografia />} />
           <Route path="/proyectos" element={<Proyectos />} />

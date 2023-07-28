@@ -10,6 +10,8 @@ const RedirectComponent = () => {
       const isMobile = window.innerWidth < 768; // Puedes ajustar el ancho de pantalla para determinar qué consideras "móvil"
       if (isMobile) {
         navigate('/biografia');
+      }else{
+        navigate('/home')
       }
     };
 

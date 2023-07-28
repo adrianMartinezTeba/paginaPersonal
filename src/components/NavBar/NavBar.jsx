@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
       <div className='navBar-container'>
           <img className='img-pag' src={Yo} alt="yo en la albufera de valencia" />
-          <Link className='btn-navBar' onClick={handlePosition} to={'/'}>Street</Link>
+          <Link className='btn-navBar' onClick={handlePosition} to={'/home'}>Street</Link>
           <Link  className='btn-navBar' onClick={handlePosition} to={'/hall'}>Hall</Link>
           <Link  className='btn-navBar' onClick={handlePosition}  to={'/proyectos'}>My Projects</Link>
           <Link className='btn-navBar' onClick={handlePosition} to={'/biografia'}>Currículum Vitae</Link>
