@@ -45,7 +45,7 @@ const Biografia = () => {
     {
       titulo: 'Portfolio',
       descripcion: 'Mi portfolio personal interactivo donde puedes conocerme.',
-      url:'',
+      url:'https://portfolio-adrianmartinezteba.vercel.app/',
       frontend:'https://github.com/adrianMartinezTeba/paginaPersonal',
       tecnologias: 'React, Node.js, Framer-motion,SASS,HTML,CSS',
     }
@@ -243,7 +243,7 @@ const Biografia = () => {
                   <h2>{proyectos.titulo}</h2>
                   <p>Descripción:{proyectos.descripcion}</p>
                   <p>GitHub Frontend: <a href="https://github.com/adrianMartinezTeba/paginaPersonal" target='blank'>{proyectos.frontend}</a></p>
-                  <p>Url del proyecto: {proyectos.url}</p>
+                  <p>Url del proyecto: <a href="https://portfolio-adrianmartinezteba.vercel.app/">{proyectos.url}</a></p>
                   <p>Tecnologías:{proyectos.tecnologias}</p>
                 </div>
           </motion.div>

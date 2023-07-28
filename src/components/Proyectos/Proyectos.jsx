@@ -11,7 +11,7 @@ const Proyectos = () => {
   const paginasWeb =
   {
     img: imagenCuadro,
-    urlProyecto: '',
+    urlProyecto: 'https://portfolio-adrianmartinezteba.vercel.app/',
     gitHubBackend: 'Sin backend',
     gitHubFrontend: 'https://github.com/adrianMartinezTeba/paginaPersonal',
     nombre: 'Portfolio',
@@ -56,7 +56,7 @@ const Proyectos = () => {
               <li>Descripción:{paginasWeb.descripcion}</li>
               <li>Backend: {paginasWeb.gitHubBackend}</li>
               <li>Frontend: <a href='https://github.com/adrianMartinezTeba/paginaPersonal' target='blank'>{paginasWeb.gitHubFrontend}</a></li>
-              <li>Url del proyecto: {paginasWeb.urlProyecto}</li>
+              <li>Url del proyecto:<a href="https://portfolio-adrianmartinezteba.vercel.app/" target='blank'> {paginasWeb.urlProyecto}</a></li>
               <li>Tecnologías: {paginasWeb.tecnologías}</li>
             </ul>}
           </div>
