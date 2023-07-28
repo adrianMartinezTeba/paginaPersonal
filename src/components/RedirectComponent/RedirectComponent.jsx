@@ -17,7 +17,7 @@ const RedirectComponent = () => {
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [navigate]);
+  }, []);
 
   return null; // No renderizamos nada, ya que esta es solo una redirección antes de la renderización real.
 };
