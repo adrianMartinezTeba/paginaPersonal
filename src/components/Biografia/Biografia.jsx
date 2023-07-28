@@ -9,7 +9,8 @@ const Biografia = () => {
     'Idiomas',
     'Certificaciones',
     'Habilidades',
-    'Sobre mí'
+    'Sobre mí',
+    'Contacto y Redes Sociales'
     // Agrega aquí los demás encabezados que desees animar
   ];
   const expLabContentText = [
