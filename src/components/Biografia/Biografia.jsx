@@ -325,8 +325,23 @@ const Biografia = () => {
                 <h4>Desarrollador</h4>
                 <p>La programación me ha dado la oportunidad de considerar mi profesión como mi propio hobbie. Disfruto ampliando conocimientos y aprendiendo sobre nuevas tecnologías, lo que  me permite mejorar mis habilidades como desarrollador. Soy un hombre ambicioso y mis proyectos de futuro están enfocados a la creación de videojuegos. Para ello, continúo mi formación de manera autodidacta aprendiendo aspectos como Blender(Software gratuito dedicado especialmente al modelado, iluminación, renderizado, la animación y creación de gráficos tridimensionales),Unreal Engine(un motor de juego creado por la compañía Epic Games)y C++(para hacer más personalizado cualquier videojuego,además de lo útil que es aprender C++).</p>
               </div>
+          </motion.div>
+        )}
+         {seccionActiva === 7 && (
+          <motion.div initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }} className='sobremi-container'>
             
-            
+             
+              <div className='card-cont'>
+                <h2>Contacto y redes</h2>
+                <h4>Correo</h4>
+                <p>adrianmartinezteba@gmail.com</p>
+                <h4>Linkdin</h4>
+                <p><a href="https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/">https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/</a></p>
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/adrianMartinezTeba"></a> https://github.com/adrianMartinezTeba</p>
+              </div>
           </motion.div>
         )}
       </div>
