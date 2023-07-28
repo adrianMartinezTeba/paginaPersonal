@@ -47,7 +47,7 @@ const Proyectos = () => {
         <div className='cuadros-container'>
 
           <div className={info ? 'infoExtended' : 'info'}>
-            <div className='inf-sup'>{paginasWeb.nombre}
+            <div className='inf-sup'><p>{paginasWeb.nombre}</p>
               <button className='infor-btn' onClick={handdleInfo}>
                 {info ? '-' : '+'}
               </button>
