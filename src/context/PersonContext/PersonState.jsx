@@ -8,7 +8,7 @@ const PersonProvider = ({ children }) => {
   const minPositionXHome = -20; // Límite izquierdo
   const maxPositionXHome = 24; // Límite derecho
   const minPositionXProy = 0; // Límite izquierdo
-  const maxPositionxProy = 70; // Límite derecho
+  const maxPositionxProy = 45; // Límite derecho
   const minPositionXHall = -21; // Límite izquierdo
   const maxPositionxHall = 25; // Límite derecho
 
