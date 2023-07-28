@@ -243,7 +243,7 @@ const Biografia = () => {
                   <h2>{proyectos.titulo}</h2>
                   <p>Descripción:{proyectos.descripcion}</p>
                   <p>GitHub Frontend: <a href="https://github.com/adrianMartinezTeba/paginaPersonal" target='blank'>{proyectos.frontend}</a></p>
-                  <p>Url del proyecto: <a href="https://portfolio-adrianmartinezteba.vercel.app/">{proyectos.url}</a></p>
+                  <p>Url del proyecto: <a href="https://portfolio-adrianmartinezteba.vercel.app/" target='blank'>{proyectos.url}</a></p>
                   <p>Tecnologías:{proyectos.tecnologias}</p>
                 </div>
           </motion.div>
