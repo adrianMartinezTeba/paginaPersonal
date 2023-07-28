@@ -339,9 +339,9 @@ const Biografia = () => {
                 <h4>Correo</h4>
                 <p>adrianmartineztebawork@gmail.com</p>
                 <h4>Linkdin</h4>
-                <p><a href="https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/">https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/</a></p>
+                <p><a href="https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/" target='blank'>https://www.linkedin.com/in/adrian-mart%C3%ADnez-teba-460479268/</a></p>
                 <h4>GitHub</h4>
-                <p><a href="https://github.com/adrianMartinezTeba/">https://github.com/adrianMartinezTeba</a> </p>
+                <p><a href="https://github.com/adrianMartinezTeba/" target='blank'>https://github.com/adrianMartinezTeba</a> </p>
               </div>
           </motion.div>
         )}
