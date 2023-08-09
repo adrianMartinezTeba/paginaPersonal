@@ -115,7 +115,7 @@ const Biografia = () => {
       fecha: '2023',
     },
     {
-      titulo: 'MondgoDB',
+      titulo: 'MongoDB',
 
       entidad: 'The Bridge',
       fecha: '2023',
