@@ -63,7 +63,42 @@
     }
 
 }
+.infCVPro{
+    justify-self: center;
+    margin-left: 200px;
+    overflow: auto;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    max-height:45vh;
+    width: 60vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border: 1px solid white;
+    background-color: black;
+    box-shadow: 0 0 8px 0 rgb(124, 113, 113), 0 0 20px 0 rgba(255, 254, 254, 0.86);
+    .card-cont {
+        border: 1px solid white;
+        justify-content: flex-start;
+        padding: 10px;
+        margin: 20px;
+        background-color: rgb(63, 87, 128);
+        box-shadow: 0 0 8px 0 rgb(68, 72, 146), 0 0 20px 0 rgba(255, 254, 254, 0.86);
+        a{
+            color:white;
+        }
+        h2 {
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
 
+        p {
+           
+            padding: 5px;
+        }
+    }
+    
+}
 .infCV-hor {
     margin: 50px;
     border: 1px solid white;
@@ -185,6 +220,28 @@
  justify-content: flex-start;
     }
   .infCV{
+    overflow: auto;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    margin: 0;
+    max-height:45vh;
+    width: 80vw;
+    .card-cont{  
+        overflow: auto;
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            text-decoration: underline;
+        }
+        p{
+            word-wrap: break-word;
+            margin-top: 5px;
+        }
+    }
+  }
+  .infCVPro{
     overflow: auto;
     overflow-y: auto;
     flex-wrap: wrap;

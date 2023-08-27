@@ -17,7 +17,7 @@ const Proyectos = () => {
       urlProyecto: 'https://portfolio-adrianmartinezteba.vercel.app/',
       gitHubBackend: 'Sin backend.',
       gitHubFrontend: 'https://github.com/adrianMartinezTeba/paginaPersonal',
-      nombre: 'Portfolio.',
+      nombre: 'Portfolio',
       descripcion: 'Mi portfolio personal.',
       tecnologías: ['React.js, framer-motion, JavaScript(consulta su correspondiente github para más información).'],
       estado: 'Acabado.'
@@ -27,7 +27,7 @@ const Proyectos = () => {
       urlProyecto: 'Próximamente.',
       gitHubBackend: 'https://github.com/adrianMartinezTeba/Back-rutinAdri',
       gitHubFrontend: 'https://github.com/adrianMartinezTeba/frontend-rutinAdri',
-      nombre: 'RutinAdri.',
+      nombre: 'RutinAdri',
       descripcion: 'Una red social donde crear tus rutinas y ver las de los demás.',
       tecnologías: ['React.js,MongoDB,JavaScript(consulta sus correspondientes githubs para más información).'],
       estado: 'En desarrollo.'
@@ -37,8 +37,8 @@ const Proyectos = () => {
       urlProyecto: 'Próximamente.',
       gitHubBackend: 'https://github.com/adrianMartinezTeba/backend-instAdri',
       gitHubFrontend: 'https://github.com/adrianMartinezTeba/frontend-instAdri',
-      nombre: 'InstAdri.',
-      descripcion: 'Mi portfolio personal.',
+      nombre: 'InstAdri',
+      descripcion: 'Una red social donde subir tus fotos y ver las de los usuarios que sigues.',
       tecnologías: ['React.js,MongoDB,JavaScript(consulta sus correspondientes githubs para más información).'],
       estado: 'En desarrollo.'
     },
@@ -77,24 +77,24 @@ const Proyectos = () => {
               {activeProjectIndex === index && (
                 <ul>
                   <li>Descripción: {project.descripcion}</li>
-                 {project.gitHubBackend === 'Sin backend' ? ( <li>Backend: {project.gitHubBackend}</li>):( <li>Backend: <a href={project.gitHubBackend} target='_blank' rel='noopener noreferrer'>{project.gitHubBackend}</a></li>)}
+                  {project.gitHubBackend === 'Sin backend.' ? (<li>Backend: {project.gitHubBackend}</li>) : (<li>Backend: <a href={project.gitHubBackend} target='_blank' rel='noopener noreferrer'> {project.gitHubBackend}</a></li>)}
                   <li>Frontend: <a href={project.gitHubFrontend} target='_blank' rel='noopener noreferrer'> {project.gitHubFrontend}</a></li>
-                 {project.urlProyecto === 'Próximamente' ? (<li>Url del proyecto:{project.urlProyecto}</li>) : ( <li>Url del proyecto: <a href={project.urlProyecto} target='_blank' rel='noopener noreferrer'> {project.urlProyecto}</a></li>)}
+                  {project.urlProyecto === 'Próximamente.' ? (<li>Url del proyecto: {project.urlProyecto}</li>) : (<li>Url del proyecto: <a href={project.urlProyecto} target='_blank' rel='noopener noreferrer'> {project.urlProyecto}</a></li>)}
                   <li>Principales tecnologías: {project.tecnologías}</li>
                   <li>Estado del proyecto: {project.estado}</li>
                 </ul>
               )}
               <div className="cuadro">
                 <div className="marco">
-                  <img src={project.img} alt="proyecto" className='proyecto-imgInd' width={'150px'} height={'150px'}/>
+                  <img src={project.img} alt="proyecto" className='proyecto-imgInd' width={'150px'} height={'150px'} />
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div ref={personDivRef} className='person-div' style={{ '--position-x': positionProyectos.x }}>
-            <Person />
-          </div>
+          <Person />
+        </div>
       </div>
       <div className="pas-inf"></div>
     </div>
