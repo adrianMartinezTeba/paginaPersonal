@@ -6,36 +6,33 @@
 }
 
 .infoExtended {
+
   padding: 5px;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #000000;
   background-color: white;
-  justify-content: center;
   margin-bottom: 10px;
-  div{
-    align-self: center;
-    justify-content: space-between;
-    width:95%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 
+  .inf-sup {
+    display: flex;
+    padding: 5px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+
   ul {
     li {
-      a{
-        color:black;
+      a {
+        color: black;
       }
+
       max-width: 400px;
     }
   }
-}
-
-.inf-sup {
-  padding: 5px;
-  width: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
 }
 
 .pas-sup {
@@ -59,6 +56,7 @@
 .person-div {
   transform: translateX(calc(var(--position-x) * 100%));
   margin-top: 300px;
+  margin-right: 100px;
   position: absolute;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -66,18 +64,19 @@
 }
 
 .cuadros-container {
-  margin-left: 30vw;
-  align-self: center;
+
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
-
+  margin-top: 20px;
+  margin-left: 30px; // Espacio entre la parte superior y los cuadros
 }
 
 .proyecto-imgInd {
   width: 150px;
+  height: 150px;
 }
 
 .pta-hall-container {
@@ -113,12 +112,26 @@
 .marco {
   padding: 10px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #7e6d5d;
+
+  img {
+    border: 1px solid black;
+  }
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
   align-self: center;
   background-color: white;
   border: 1px solid black;
   margin-bottom: 10px;
+  padding: 5px;
+
+  .inf-sup {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
 }
