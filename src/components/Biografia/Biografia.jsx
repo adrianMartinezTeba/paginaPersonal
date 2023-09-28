@@ -69,7 +69,16 @@ const Biografia = () => {
       descripcion: 'Una red social donde subir tus fotos y ver las de los usuarios que sigues.',
       tecnologías: ['React.js,MongoDB,JavaScript(consulta sus correspondientes githubs para más información).'],
       estado: 'En desarrollo.'
-    },]
+    },{
+      urlProyecto: 'https://react-blender-three.vercel.app/',
+      gitHubBackend: 'Sin backend.',
+      gitHubFrontend: 'https://github.com/adrianMartinezTeba/ReactBlenderThree',
+      nombre: '3D Viewer',
+      descripcion: 'Un proyecto donde he juntado mi profesión de programador y mi hobbie el diseño 3D.',
+      tecnologías: ['React.js,Three.js,Blender(consulta sus correspondientes githubs para más información).'],
+      estado: 'Acabado.'
+    }
+  ]
 
 
   const idiomas = [

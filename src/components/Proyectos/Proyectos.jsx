@@ -5,7 +5,7 @@ import Person from '../Person/Person';
 import { PersonContext } from '../../context/PersonContext/PersonState';
 import imagenCuadro from '../../assets/imagenes/imagenCuadro.jpg';
 import yo from '../../assets/imagenes/yo.jpeg';
-
+import captura3Dviewer from '../../assets/imagenes/captura3Dviewer.png';
 const Proyectos = () => {
   const navigate = useNavigate();
   const { positionProyectos, updatePositionHome, updatePositionHall } = useContext(PersonContext);
@@ -42,6 +42,16 @@ const Proyectos = () => {
       tecnologías: ['React.js,MongoDB,JavaScript(consulta sus correspondientes githubs para más información).'],
       estado: 'En desarrollo.'
     },
+    {
+      img: captura3Dviewer,
+      urlProyecto: 'https://react-blender-three.vercel.app/',
+      gitHubBackend: 'Sin backend.',
+      gitHubFrontend: 'https://github.com/adrianMartinezTeba/ReactBlenderThree',
+      nombre: '3D Viewer',
+      descripcion: 'Un proyecto donde he juntado mi profesión de programador y mi hobbie el diseño 3D.',
+      tecnologías: ['React.js,Three.js,Blender(consulta sus correspondientes githubs para más información).'],
+      estado: 'Acabado.'
+    }
     // Add more project objects here
   ];
 
